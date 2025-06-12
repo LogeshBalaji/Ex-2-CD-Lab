@@ -35,6 +35,7 @@
 
 # INPUT
 ## exp2.l.txt
+```
 %{ /* program to recognize a C program */ int COMMENT = 0; %}
 
 identifier [a-zA-Z_][a-zA-Z0-9_]*
@@ -74,6 +75,7 @@ int|float|char|double|while|for|do|if|break|continue|void|switch|case|long|struc
 int main(int argc, char **argv) { if (argc > 1) { FILE *file; file = fopen(argv[1], "r"); if (!file) { printf("could not open %s \n", argv[1]); exit(0); } yyin = file; } yylex(); printf("\n\n"); return 0; }
 
 int yywrap() { return 1; }
+```
 # OUTPUT
 ## var.c
 ```.py
